@@ -1,0 +1,73 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="yPb6FEC4FX1cqlwAyaFZ">
+    <mxGraphModel dx="736" dy="601" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1wEobtU8BGpOoLNGExoq-7" edge="1" parent="1" source="1wEobtU8BGpOoLNGExoq-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="1wEobtU8BGpOoLNGExoq-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;color: rgb(0, 127, 255);&quot;&gt;Users&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;-------------------------&lt;/div&gt;&lt;div&gt;PK user_id&lt;/div&gt;&lt;div&gt;full_name&lt;/div&gt;&lt;div&gt;email UNIQUE&lt;/div&gt;&lt;div&gt;role&lt;/div&gt;&lt;div&gt;phone_number&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="160" x="20" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;br&gt;&lt;b&gt;&lt;font style=&quot;color: rgb(51, 255, 51);&quot;&gt;Bookings&lt;br&gt;&lt;/font&gt;&lt;/b&gt;-------------------------&lt;br&gt;PK booking_id&lt;br&gt;FK user_id&lt;br&gt;FK match_id&lt;br&gt;seat_number&lt;br&gt;payment_status&lt;br&gt;total_cost" vertex="1">
+          <mxGeometry height="130" width="150" x="300" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-10" edge="1" parent="1" source="1wEobtU8BGpOoLNGExoq-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="1wEobtU8BGpOoLNGExoq-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;br&gt;&lt;b&gt;&lt;font style=&quot;color: rgb(255, 153, 51);&quot;&gt;Matches&lt;/font&gt;&lt;br&gt;&lt;/b&gt;-------------------------&lt;br&gt;PK match_id&lt;br&gt;fixture&lt;br&gt;tournament_category&lt;br&gt;base_ticket_price&lt;br&gt;match_status" vertex="1">
+          <mxGeometry height="130" width="140" x="610" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;1 User to Many Bookings&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="100" x="190" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;1 Match to Many Bookings&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="100" x="480" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;b&gt;FK Rules:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Bookings.user_id references Users.user_id&lt;/div&gt;&lt;div&gt;Bookings.match_id references Matches.match_id&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="360" x="15" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;b&gt;Logical 1-to-1:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Each booking row maps exactly one user to one match for one reserved seat.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="280" x="470" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;color: rgb(255, 102, 102); font-size: 18px;&quot;&gt;Football Ticket Booking System ERD&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="350" x="180" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value=" USERS" vertex="1">
+          <mxGeometry height="30" width="60" x="70" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-25" edge="1" parent="1" source="1wEobtU8BGpOoLNGExoq-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="1wEobtU8BGpOoLNGExoq-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="140" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="M" vertex="1">
+          <mxGeometry height="30" width="60" x="280" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="BOOKINGS " vertex="1">
+          <mxGeometry height="30" width="60" x="340" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="M" vertex="1">
+          <mxGeometry height="30" width="60" x="430" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-26" edge="1" parent="1" source="1wEobtU8BGpOoLNGExoq-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="1wEobtU8BGpOoLNGExoq-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="580" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="MATCHES" vertex="1">
+          <mxGeometry height="30" width="60" x="640" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;1 User to Many Bookings &lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="190" x="100" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="1wEobtU8BGpOoLNGExoq-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;1 Match to Many Bookings&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="490" y="340" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
